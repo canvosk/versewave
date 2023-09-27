@@ -6,6 +6,7 @@ import 'package:versewave/config/theme/app_theme.dart';
 import 'package:versewave/injection_container.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await initializeDependencies();
   runApp(const ProviderScope(child: MyApp()));
 }

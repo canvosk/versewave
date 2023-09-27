@@ -18,3 +18,7 @@ TextStyle? articleCardInfo(BuildContext context) =>
           fontWeight: FontWeight.w400,
           fontStyle: FontStyle.italic,
         );
+TextStyle? goBackButtonText(BuildContext context) =>
+    Theme.of(context).textTheme.titleMedium?.copyWith(
+          color: headerTextColor,
+        );
