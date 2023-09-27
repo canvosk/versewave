@@ -51,6 +51,10 @@ class SavedButton extends ConsumerWidget {
       onPressed: () {
         //save article
         ref.read(saveArticleFutureProvider(article));
+        const snackBar = SnackBar(
+          content: Text('Makale kaydedildi.'),
+        );
+        ScaffoldMessenger.of(context).showSnackBar(snackBar);
         return;
       },
       icon: const MyFaIcon(

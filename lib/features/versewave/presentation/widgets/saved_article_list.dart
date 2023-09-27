@@ -38,12 +38,14 @@ class SavedArticleList extends ConsumerWidget {
                         dismissible: DismissiblePane(
                           onDismissed: () {
                             ref.read(removeArticleFutureProvider(article[index]));
+                            ref.watch(localGetSavedArticleFutureProvider);
                           },
                         ),
                         children: [
                           SlidableAction(
                             onPressed: (context) {
                               ref.read(removeArticleFutureProvider(article[index]));
+                              ref.watch(localGetSavedArticleFutureProvider);
                             },
                             backgroundColor: const Color(0xFFFE4A49),
                             foregroundColor: Colors.white,
